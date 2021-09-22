@@ -147,8 +147,28 @@ booo([1, 2, 3, 4, 5]);
 
 function arrayOfHiNTimes(n) {
   let hiArray = [];
-  for (let i = 0; i < n.length; i++) {
+  for (let i = 0; i < n; i++) {
     hiArray[i] = "hi";
   }
   return hiArray;
 }
+
+//O(n)
+
+
+//DELETE THIS
+
+let marinnaArr = ['not here','not here','not here','not here','not here','not here','not here','not here','not here','not here','not here','not here','here','not here','not here','not here','not here','not here','not here','not here','not here','not here']
+
+let largeArr = Array(10000).fill('not here')
+largeArr.push('here')
+
+function wheresMarinna(x){
+    let t0 = performance.now() // O(1)
+    console.log(x, t0)
+    let value = x.find(num => num === 'here')
+    let t1 = performance.now()
+    console.log("this took" + (t1-t0) + "ms")
+    return value
+}
+
